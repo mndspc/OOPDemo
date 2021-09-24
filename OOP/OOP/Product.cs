@@ -3,7 +3,8 @@
 namespace OOP
 {
     //  This class demo. how to create properties.
-    class Product
+    //  FMCG-Product details
+  partial  class Product
     {
         private int proCode;
         /// <summary>
@@ -61,7 +62,20 @@ namespace OOP
 
         public ProType ProType { get; set; }
 
+        public Product()
+        {
 
+        }
+
+    }
+
+    //Non-FMCG product Detail
+    partial class Product
+    {
+        public Product(string ProType)
+        {
+            Console.WriteLine($"{ProType}");
+        }
     }
 
     enum ProType
